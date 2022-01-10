@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/buy.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <title>주문/결제</title>
+</head>
+<body>
+<script>
+        function goAddr(){
+		    new daum.Postcode({
+		        oncomplete: function(data) {
+					$(".addr1").val(data.address);
+                    $(".zip").val(dta.azonecode);
+		        }
+		    }).open();
+		}
+</script>
+    <div id="wrap">
+        {% include 'header.html' %}
+        <div class="tosel-wrap">
+            <div class="title-wrap pc">
+                <div class="title-box bg-c-orange ft-c-w">주문 / 결제</div>
+
+                <div class="workstep">
+                    <span>장바구니</span>
+                    <img src="/static/images/workstep-arrow.png">
+                    <span>주문/결제</span>
+                    <img src="/static/images/workstep-arrow.png">
+                    <span>주문완료</span>
+                </div>
+            </div>
+            <div class="buy-wrap">
+            <div class="buy-info">
+                <div class="buyhuman">
+                    <div class="sub-title ft-w-b">구매자 정보</div>
+                    <table>
+                        <tr>
+                            <th>이름</th>
+                            <td>김토셀</td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td>kimtosel@tosel.com</td>
+                        </tr>
+                        <tr>
+                            <th>휴대폰 번호</th>
+                            <td>010-1234-1324</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="recipient">
+                    <div class="sub-title ft-w-b">받는사람 정보</div>
+                    <table>
+                        <tr>
+                            <th>이름</th>
+                            <td><input class="sm-input" type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>배송주소</th>
+                            <td>
+                                <div class="zip-add">
+                                    <input class="sm-input zip" type="text" readonly >
+                                    <span class="zip-find bg-c-orange" onclick="goAddr()">주소찾기</span>
+                                    <div>
+                                        <input type="text" class="addr addr1">
+                                    </div>
+                                    <div>
+                                        <input type="text" class="addr addr2">
+                                    </div>
+
+                                    <div class="note pc">*정확하고 빠른 배송을 위해 입력된 주소를 확인하시고 업데이트해 주시기 바랍니다.</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td>
+                                <input class="sm-input" type="text">
+                                <span class="change bg-c-orange">변경</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>배송 요청사항</th>
+                            <td >
+                                <textarea class="request" placeholder="60자 이내로 작성해주세요."></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="buy-list">
+                    <div class="sub-title ft-w-b">결제정보</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>상품정보</th>
+                                <th>수량</th>
+                                <th>상품금액</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="book-img"><img src="/static/images/book.png"></td>
+                                <td class="book-info">
+                                    <div class="level">Basic</div>
+                                    <div class="book-nm ft-w-b">LISTENING 1</div>
+                                </td>
+                                <td class="number">
+                                    <span class="mobile-display-block">수량 :</span> 1</span>
+                                </td>
+                                <td>
+                                    <div class="price">19,900원</div>
+                                    <div class="sale-price">
+                                        <span class="ft-c-o ft-w-b">10%</span>
+                                        <span class="amount">19,000</span>
+                                        <span>원</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="book-img"><img src="/static/images/book.png"></td>
+                                <td class="book-info">
+                                    <div class="level">Basic</div>
+                                    <div class="book-nm ft-w-b">LISTENING 1</div>
+                                </td>
+                                <td class="number">
+                                    <span class="mobile-display-block">수량 :</span> 1</span>
+                                </td>
+                                <td>
+                                    <div class="price">19,900원</div>
+                                    <div class="sale-price">
+                                        <span class="ft-c-o ft-w-b">10%</span>
+                                        <span class="amount">19,000</span>
+                                        <span>원</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tax-wrap">
+                    <div class="sub-title ft-w-b">현금영수증</div>
+                    <div class="tax-box">
+                        <div class="tax-chk">
+                            <input type="checkbox" id="tax">
+                            <label for="tax">현금영수증 신청</label>
+                        </div>
+                        <div class="tax-select">
+                            <input type="radio" name="tax" id="tax-1"><label for="tax-1">소득공제</label>
+                            <input type="radio" name="tax" class="hm" id="tax-2"><label for="tax-2">지출증빙</label>
+                        </div>
+                        <div class="info">
+                            <select>
+                                <option>휴대폰번호</option>
+                            </select>
+                            <input type="text" class="tax-mobile">
+                        </div>
+                    </div>
+
+                    <div class="tax-consent">
+                         <input type="checkbox" id="consent">
+                         <label for="consent">현금영수증 발급을 위하여, 휴대폰 번호 또는 현금영수증카드번호를 수집하며, 5년간 처리에 동의합니다.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="buy-price">
+                <div class="buy-price-wrap">
+                    <div class="total-price-wrap">
+                        <section>
+                            <span>상품금액</span>
+                            <span>9,999,999원</span>
+                        </section>
+                        <section>
+                            <span>
+                                배송비<span class="qna">?</span>
+                            </span>
+                            <div class="qna-answer">*제주 추가 5000원 / 제주 외 도서지역 추가 10000원</div>
+                            <span>3,000원</span>
+                        </section>
+                        <section>
+                            <span>할인금액</span>
+                            <span>999,999원</span>
+                        </section>
+                    </div>
+
+                    <div class="total-price">
+                        <span class="ft-w-b">최종 결제 금액</span>
+                        <span id="totalPrice" class="ft-c-o ft-w-b">999,999원</span>
+                    </div>
+                    <div class="chk">
+                        <input type="checkbox" id="buy">
+                        <label for="buy">주문내역확인 동의</buy>
+                        <span class="ft-c-o">(필수)</span>
+                    </div>
+
+                    <div class="btn-wrap pc">
+                        <div class="btn cart-btn ft-c-o border-orange bg-c-white cursor">장바구니 가기</div>
+                        <div class="btn buy-btn bg-c-orange ft-c-w cursor">결제하기</div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="btn-wrap mobile-display-block">
+                    <div class="btn cart-btn ft-c-o border-orange bg-c-white cursor ft-w-b">장바구니 가기</div>
+                    <div class="btn buy-btn bg-c-orange ft-c-w cursor ft-w-b">결제하기</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

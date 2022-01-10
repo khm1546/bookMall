@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>장바구니</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/static/css/Cart.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div id="wrap">
+        {% include 'header.html' %}
+
+
+        <div class="tosel-wrap">
+            <div class=" swiper mySwiper">
+                <div class="left-menu swiper-wrapper">
+                    <section class="menu-title bg-c-orange ft-c-w pc">마이페이지</section>
+                    <section class="swiper-slide">
+                        <img  class="mobile" src="/static/images/buylist.png">
+                        <span>주문내역 관리</span>
+                    </section>
+                    <section class="swiper-slide">
+                        <img class="mobile" src="/static/images/cart.png">
+                        <span>장바구니</span>
+                    </section>
+                    <section class="swiper-slide">
+                        <img class="mobile" src="/static/images/reset.png">
+                        <span>취소/반품/교환</span>
+                    </section>
+                    <section class="swiper-slide">
+                        <img class="mobile" src="/static/images/reset.png">
+                        <span>회원정보</span>
+                    </section>
+                </div>
+            </div>
+
+            <div class="cart-wrap">
+                <div class="page-title pc">
+                    <img src="/static/images/black_cart.png">
+                    <span>장바구니</span>
+                </div>
+
+                <div class="workstep pc">
+                    <span>장바구니</span>
+                    <img src="/static/images/workstep-arrow.png">
+                    <span>주문/결제</span>
+                    <img src="/static/images/workstep-arrow.png">
+                    <span>주문완료</span>
+                </div>
+
+                <div class="cart-title">
+                    <input type="checkbox">
+                    <span>전체선택</span>
+                    <span>상품정보</span>
+                    <span class="pc">상품금액</span>
+                    <span class="pc">할인적용금액</span>
+                    <span class="pc">상품수량</span>
+                    <span></span>
+                </div>
+
+                <div class="cart">
+                    <section>
+                        <input type="checkbox">
+                        <div class="book-img">
+                            <img src="/static/images/book.png">
+                        </div>
+                            <div class="book-nm">
+                                <b>LISTENING 1</b>
+                                <p>High Junior</p>
+                            </div>
+
+                            <div class="price">정가 : <span class="t-d-line">19,999원</span></div>
+
+                            <div class="sale-price">
+                                <b>10%</b>
+                                <span>19,900원</span>
+                            </div>
+
+                            <div class="amount-box">
+                                    <div class="amount-check">
+                                        <div class="sign sign-mius">
+                                            <img src="/static/images/miuns-num.png" class="minus">
+                                        </div>
+                                        <div class="amount-num">
+                                            <input type="number" class="amount-count" maxlength="2" min="1" value="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                        </div>
+                                        <div class="sign sign-plus">
+                                            <img src="/static/images/plus-num.png" class="plus">
+                                        </div>
+                                    </div>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            $(document).ready(function (){
+                $('.amount-box .sign-mius').click(function(e){
+                    e.preventDefault();
+                    var stat = $(this).parent().find('.amount-count').val();
+                    var num = parseInt(stat,10);
+                    num--;
+                    if(num<=1){
+                        num = 1;
+                    }
+                    $(this).parent().parent().find('.amount-count').val(num);
+                });
+
+                $('.amount-box .sign-plus').click(function(e){
+                    e.preventDefault();
+                    var stat = $(this).parent().find('.amount-count').val();
+                    var num = parseInt(stat,10);
+                    num++;
+                    if(num>=99){
+                        num = 99;
+                    }
+                    $(this).parent().parent().find('.amount-count').val(num);
+                });
+            })
+
+            window.swiper1 = new Swiper(".mySwiper", {
+                slidesPerView: "auto",
+                spaceBetween: 0,
+
+            });
+        </script>
+        {% include 'footer.html' %}
+    </div>
+</body>
+</html>
