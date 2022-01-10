@@ -1,84 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/header.css" >
-    <link rel="stylesheet" href="/static/css/total.css" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/real-make-header.css">
+    <link href="/static/css/total.css" rel="stylesheet">
+    <title>교제몰 메인</title>
+
 </head>
 <body>
-        <div id="header">
+    <div class="mobile-all-menu">
+        <section class="mobile-header">
+            <section class="mobile-header-items">
+                <img src="/static/images/tosel-logo.png" class="m-logo">
+                <img src="/static/images/m-close.png" class="m-close">
+            </section>
+        </section>
+        <div class="mobile-ne">
+            <div class="mobile-con">
+                <img src="/static/images/all-cate.png" class="all-cate">
 
-            <div id="top-menu">
-
-                <div class="logo-box">
-                    <img src="/static/images/header/tosel-logo.png" class="t-logo pc">
-                    <img src="/static/images/header/logo.png" class="t-logo-m mobile">
+                <div class="mobile-slide-menu">
+                    <section>
+                        <img src="/static/images/all-text.png" class="mobile-menu-allText">
+                        <span>전체 교재</span>
+                    </section>
+                    <section>
+                        <img src="/static/images/event.png" class="mobile-menu-event">
+                        <span>이벤트</span>
+                    </section>
+                    <section>
+                        <img src="/static/images/best-seller.png" class="mobile-menu-bestSeller">
+                        <span>베스트 셀러</span>
+                    </section>
+                    <section>
+                        <img src="/static/images/new-product.png" class="mobile-menu-newProduct">
+                        <span>신상품</span>
+                    </section>
+                    <section>
+                        <img src="/static/images/goods.png" class="mobile-menu-goods">
+                        <span>굿즈</span>
+                    </section>
+                    <section>
+                        <img src="/static/images/data-room.png" class="mobile-menu-dataRoom">
+                        <span>학습 자료실</span>
+                    </section>
                 </div>
-
-                <nav>
-                    <ul>
-                        <li><img src="/static/images/header/join.png" class="join"><a href="#">회원가입</a></li>
-                        <li><img src="/static/images/header/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
-                        <li><img src="/static/images/header/notice.png" class="notice"><a href="#">공지사항</a></li>
-                        <li><img src="/static/images/header/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
-                        <li><img src="/static/images/header/cart.png" class="cartshow"><a href="#">장바구니</a></li>
-                    </ul>
-                </nav>
-
-                <div class="ham-menu ">
-                    <img src="/static/images/header/ham-menu.png" class="ham-menu-bar">
-                </div>
-
-                <div class="title mobile">장바구니</div>
-
-                <img src="/static/images/header/bell.png" class="bell">
-
-
             </div>
 
+            <div class="mobile-nav">
+                <ul>
+                    <li>
+                        <img src="/static/images/mobile-user.png" class="mobile-user">
+                        <a href="#">마이페이지</a>
+                    </li>
+                    <li>
+                        <img src="/static/images/bell.png" class="mobile-bell">
+                        <a href="#">공지사항</a>
+                    </li>
+                    <li>
+                        <img src="/static/images/mobile-faq.png" class="mobile-faq">
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <img src="/static/images/mobile-cart.png" class="mobile-cart">
+                        <a href="#">장바구니</a>
+                    </li>
+                    <li>
+                        <img src="/static/images/mobile-join.png" class="mobile-join">
+                        <a href="#">회원가입</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <section class="mobile-login"><span>로그인</span></section>
         </div>
 
-        <div class="sub-header pc ">
-            <section>
-                <img src="/static/images/totalBook.png">
+    </div>
+
+
+    <div id="header">
+
+        <div id="top-menu">
+
+            <div class="logo-box">
+                <img src="/static/images/tosel-logo.png" class="t-logo">
+                <img src="/static/images/tosel-mobile-logo.png" class="tm-logo">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a class="login-btn">로그인</a></li>
+                    <li><img src="/static/images/join.png" class="join"><a href="#">회원가입</a></li>
+                    <li><img src="/static/images/mypage.png" class="mypage"><a href="#">마이페이지</a></li>
+                    <li><img src="/static/images/notice.png" class="notice"><a href="#">공지사항</a></li>
+                    <li><img src="/static/images/FAQ.png" class="FAQ"><a href="#">FAQ</a></li>
+                    <li><img src="/static/images/cart.png" class="cart"><a href="#">장바구니</a></li>
+                </ul>
+            </nav>
+
+
+
+            <div class="logo-box logo-title-box">
+                <h1 class="logo-title">회원 정보</h1>
+            </div>
+
+            <div class="logo-box bell-box">
+                <img src="/static/images/bell.png" class="bell m-btn">
+                <span class="amount-bell">1</span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="stick-area">
+        <div class="fixed-category swiper mySwiper">
+            <div class="fixed-menu swiper-wrapper">
+                <section class="swiper-slide">
+                    <!-- <a href="#" class="m-btn"> -->
+                    <img src="/static/images/m-orderlist.png" class="all-text-fix m-btn">
+                    <span class="m-btn">주문내역 관리</span>
+                    <!-- </a> -->
+                </section>
+                <section class="swiper-slide">
+                    <!-- <a href="#" class="m-btn">  -->
+                    <img src="/static/images/m-cartlist.png" class="event-fix m-btn">
+                    <span class="m-btn">장바구니</span>
+                    <!-- </a> -->
+                </section>
+                <section class="swiper-slide">
+                    <!-- <a href="#" class="m-btn"> -->
+                    <img src="/static/images/m-cancellist.png" class="best-seller-fix">
+                    <span>취소/반품/교환 조회</span>
+                    <!-- </a> -->
+                </section>
+                <section class="swiper-slide">
+                    <!-- <a href="#" class="m-btn"> -->
+                    <img src="/static/images/m-infolist.png" class="new-product-fix">
+                    <span>회원 정보</span>
+                    <!-- </a> -->
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="content">
+
+        <div class="category-area">
+            <section class="category-item">
+                <img src="/static/images/all-text.png" class="about-book">
                 <span>전체 교재</span>
             </section>
-
-            <section>
-                <img src="/static/images/event.png">
+            <section class="category-item">
+                <img src="/static/images/event.png" class="about-event">
                 <span>이벤트</span>
             </section>
-
-            <section>
-                <img src="/static/images/best.png">
-                <span>베스트셀러</span>
+            <section class="category-item">
+                <img src="/static/images/best-seller.png" class="about-best">
+                <span>베스트 셀러</span>
             </section>
-
-            <section>
-                <img src="/static/images/new.png">
+            <section class="category-item">
+                <img src="/static/images/new-product.png" class="about-new">
                 <span>신상품</span>
             </section>
-
-            <section>
-                <img src="/static/images/goods.png">
+            <section class="category-item">
+                <img src="/static/images/goods.png" class="about-good">
                 <span>굿즈</span>
             </section>
-
-            <section>
-                <img src="/static/images/down.png">
+            <section class="category-item">
+                <img src="/static/images/data-room.png" class="about-room">
                 <span>학습 자료실</span>
             </section>
-
-            <section>
-                <div class="search-box">
-                    <img src="/static/images/search-img.png" class="search-img">
-                    <input type="search">
-                    <button>검색</button>
-                </div>
-            </section>
+            <div class="search-box">
+                <img src="/static/images/search.png" class="search-img">
+                <input type="search">
+                <button>검색</button>
+            </div>
         </div>
+
+
+    </div>
+
+
+<script>
+
+
+    //-------------스크롤
+
+    window.swiper1 = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+//------------- 페이지별변경사항  페이지에 맞는 모바일 상단 정보에 포커스, css 바도 맞추어 수정
+        /*페이지별변경사항 .fixed-menu > section::nth-child(a)의 a를변경하여 페이지에 맡는 fixed header를 제작
+                html 페이지 -> script initailSlide: a도 변경 필요
+                */
+        initialSlide: 4,
+    });
+
+
+    //--------------- 모바일 토글버튼 ----------------------
+
+    $(document).ready(function(){
+        $('.mobile-all-menu div').hide();
+        $('.mobile-all-menu section').hide();
+        $('.m-ham').click(function(){
+            $('.mobile-all-menu').css('background','#fff');
+            $('.mobile-all-menu').css('width','100%');
+            $('.mobile-all-menu div').fadeIn();
+            $('.mobile-all-menu section').fadeIn();
+            $('body').css('overflow-y','hidden');
+        });
+        $('.m-close').click(function(){
+            $('.mobile-all-menu').css('background','transparent');
+            $('.mobile-all-menu').css('width','0%');
+            $('.mobile-all-menu div').fadeOut();
+            $('.mobile-all-menu section').fadeOut();
+            $('body').css('overflow-y','visible');
+        });
+    });
+
+
+
+
+
+
+
+</script>
 </body>
 </html>

@@ -20,15 +20,16 @@
 </script>
     <div id="wrap">
         {% include 'header.html' %}
-        <div class="tosel-wrap">
+
+        <div class="contents-area">
             <div class="title-wrap pc">
                 <div class="title-box bg-c-orange ft-c-w">주문 / 결제</div>
 
                 <div class="workstep">
                     <span>장바구니</span>
-                    <img src="/static/images/workstep-arrow.png">
+                    <img src="/static/images/deo-view.png">
                     <span>주문/결제</span>
-                    <img src="/static/images/workstep-arrow.png">
+                    <img src="/static/images/deo-view.png">
                     <span>주문완료</span>
                 </div>
             </div>
@@ -215,6 +216,18 @@
             </div>
 
         </div>
+
+        {% include 'footer.html' %}
     </div>
+
+<script>
+    $(document).ready(function (){
+        $(".qna").hover(function(){
+            $(".qna-answer").show();
+        }, function (){
+            $(".qna-answer").hide();
+        });
+    });
+</script>
 </body>
 </html>

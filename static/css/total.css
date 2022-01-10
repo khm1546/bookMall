@@ -88,3 +88,7 @@ input[type="radio"]:after {
     display: none;
 }
 input[type="radio"]:checked:after { display: block; }
+
+.d-f {
+    display: flex;
+}

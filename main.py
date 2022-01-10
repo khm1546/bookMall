@@ -17,6 +17,11 @@ def buy():
 
     return render_template("/mypage/buy.html")
 
+@app.route("/refund")
+def refund():
+
+    return render_template("/mypage/refund.html")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 

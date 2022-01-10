@@ -1,14 +1,6 @@
 @charset "utf-8";
 
-
-
-.tosel-wrap {
-    width:1195px;
-    margin:0 auto;
-    margin-top:80px;
-}
-
-.tosel-wrap > .title-wrap {
+.contents-area > .title-wrap {
     width:1195px;
     border-bottom: 4px solid #EC5937;
     display:flex;
@@ -16,7 +8,7 @@
     position:relative;
 }
 
-.tosel-wrap > .title-wrap > .title-box {
+.contents-area > .title-wrap > .title-box {
     width: 228px;
     height: 109px;
     text-align: center;
@@ -393,29 +385,33 @@ table {
 
 .qna-answer {
     width:201px;
-    height:52px;
+    height:54px;
     background: #FFFFFF;
-    bordr:2px solid #DFDFDF;
+    border:2px solid #DFDFDF;
     position: absolute;
     text-align: center;
     color:#EC5937;
     display: flex;
     align-items: center;
-    padding:15px;
+    padding:10px;
     font-size: 12px;
     border-radius: 10px;
+    position: absolute;
+    top:90px;
+    left:75px;
+    display:none;
 }
 
 @media (min-width:650px) and (max-width:1275px) {
 
-    .tosel-wrap {
+    .contents-area {
         width:93.7255vw;
         height:123.0588vw;
         margin:0 auto;
         margin-top:6.2745vw;
     }
 
-    .tosel-wrap > .title-wrap {
+    .contents-area > .title-wrap {
         width:93.7255vw;
         border-bottom: 0.3137vw solid #EC5937;
         display:flex;
@@ -423,7 +419,7 @@ table {
         position: relative;
     }
 
-    .tosel-wrap > .title-wrap > .title-box {
+    .contents-area > .title-wrap > .title-box {
         width: 17.8824vw;
         height: 8.5490vw;
         text-align: center;
@@ -792,11 +788,34 @@ table {
         margin-left:0.6275vw;
     }
 
+    .qna-answer {
+        width:15.7647vw;
+        height:6.0784vw;
+        background: #FFFFFF;
+        border:0.1569vw solid #DFDFDF;
+        position: absolute;
+        text-align: center;
+        color:#EC5937;
+        display: flex;
+        align-items: center;
+        padding:0.7843vw;
+        font-size: 0.4rem;
+        border-radius: 0.7843vw;
+        position: absolute;
+        top:7.0588vw;
+        left:5.8824vw;
+        display:none;
+    }
+
 }
 
 @media (min-width:320px) and (max-width:649px) {
 
-    .tosel-wrap {
+    .pc {
+        display:none !important;
+    }
+
+    .contents-area {
         width:100%;
         height:auto;
         margin-top:7.6923vw;
@@ -808,6 +827,7 @@ table {
         width:93.7%;
         margin:0 auto;
         display: block;
+        margin-top:7.6923vw;
     }
 
     .buy-info {
@@ -1007,7 +1027,8 @@ table {
         padding: 5.1282vw;
         background: #FFFFFF;
         font-size:1.5rem;
-        border:0.2564VW solid #F3F3F3;
+        border-top:0.2564VW solid #F3F3F3;
+        margin-bottom:33.3333vw;
     }
 
     .total-price-wrap > section {
@@ -1171,5 +1192,9 @@ table {
 
     .tax-consent > label {
         margin-left:2.0513vw;
+    }
+
+    #footer {
+        display: none !important;
     }
 }
