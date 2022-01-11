@@ -62,7 +62,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked { background: #EC5937; border: none; }
 
 input[type="checkbox"]:after {
-    content: ''; position: relative; left: 14%; top: 20%; width: 67%; height: 81%;
+    content: ''; position: relative; left: 12%; top: 15%; width: 75%; height: 81%;
     background: url(/static/images/input-check.png) no-repeat;
     background-size: contain; transform: rotate(10deg);
     display: none;

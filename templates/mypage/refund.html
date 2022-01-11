@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <link href="/static/css/refund.css" rel="stylesheet">
-    <title>교제몰 메인</title>
+    <link href="/static/css/refund-total.css" rel="stylesheet">
+    <title>취소/환불 신청</title>
 
 </head>
 <body>
     {% include 'header.html' %}
+    <script>
+        $(document).ready(function(){
+           $(".refund-btn").click(function(){
+                if($(".refund-chk").is(":checked") == false){
+                    alert("체크해라");
+                }else{
+                    alert("체크함");
+                }
+           });
+        });
+    </script>
     <div class="contents-area d-f">
         <section class="mypage-menu">
                 <h2 class="mypage-title">마이페이지</h2>
@@ -31,6 +43,70 @@
                 <span>사유 선택</span>
                 <img src="/static/images/workstep-arrow.png">
                 <span>취소신청 완료</span>
+            </section>
+
+            <section class="refund-list">
+                <b>취소할 상품을 선택해주세요.</b>
+
+                   <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>상품정보</th>
+                                <th>수량</th>
+                                <th>상품금액</th>
+                                <th>배송상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input class="refund-chk" type="checkbox"></td>
+                                <td class="book-img"><img src="/static/images/yellow-book.png"></td>
+                                <td class="book-info">
+                                    <div class="level">Basic</div>
+                                    <div class="book-nm ft-w-b">LISTENING 1</div>
+                                    <div class="category">for Teachers</div>
+                                </td>
+                                <td class="number">
+                                    <span class="mobile-display-block">수량 :</span> 1</span>
+                                </td>
+                                <td class="price-info">
+                                    <div class="sale-price">
+                                        <span class="ft-c-o ft-w-b">10%</span>
+                                        <span class="amount ft-w-b">19,000</span>
+                                        <span>원</span>
+                                    </div>
+                                </td>
+                                <td class="shipping ft-w-b">배송준비중</td>
+                            </tr>
+
+                            <tr>
+                                <td><input class="refund-chk" type="checkbox"></td>
+                                <td class="book-img"><img src="/static/images/yellow-book.png"></td>
+                                <td class="book-info">
+                                    <div class="level">Basic</div>
+                                    <div class="book-nm ft-w-b">LISTENING 1</div>
+                                    <div class="category">for Teachers</div>
+                                </td>
+                                <td class="number">
+                                    <span class="mobile-display-block">수량 :</span> 1</span>
+                                </td>
+                                <td class="price-info">
+                                    <div class="sale-price">
+                                        <span class="ft-c-o ft-w-b">10%</span>
+                                        <span class="amount ft-w-b">19,000</span>
+                                        <span>원</span>
+                                    </div>
+                                </td>
+                                <td class="shipping ft-w-b">배송준비중</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-wrap">
+                        <div class="bg-c-orange refund-btn">선택완료</div>
+                        <div class="border-orange ft-c-o back-btn ft-w-b pc">뒤로가기</div>
+                    </div>
             </section>
         </section>
     </div>

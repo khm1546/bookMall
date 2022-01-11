@@ -807,6 +807,9 @@ table {
         display:none;
     }
 
+    .category {
+        display:none;
+    }
 }
 
 @media (min-width:320px) and (max-width:649px) {

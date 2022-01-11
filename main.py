@@ -22,6 +22,11 @@ def refund():
 
     return render_template("/mypage/refund.html")
 
+@app.route("/refund-reason")
+def reason():
+
+    return render_template("/mypage/refund-reason.html")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
