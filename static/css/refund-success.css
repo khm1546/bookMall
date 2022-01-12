@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+.refund-title {
+    border-bottom: 4px solid #EC5937;
+    padding-bottom:15px;
+}
+
+.success-text {
+    text-align: center;
+    margin-top:70px;
+    font-size:32px;
+    font-weight: bold;
+}
+
+.refund-info {
+    width:308px;
+    margin:0 auto;
+    display:flex;
+    font-size:14px;
+    margin-top:12px;
+    justify-content: space-between;
+}
+
+.golist {
+    width:276px;
+    height:90px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 90px;
+    font-size:26px;
+    margin:0 auto;
+    margin-top:142px;
+    cursor: pointer;
+}
+
+@media (min-width:650px) and (max-width:1275px) {
+    .refund-title {
+        border-bottom: 0.3137vw solid #EC5937;
+        padding-bottom:1.1765vw;
+    }
+    .success-text {
+        margin-top:5.4902vw;
+        font-size:1rem;
+    }
+    .refund-info {
+        width:24.1569vw;
+        margin:0 auto;
+        font-size:0.5rem;
+        margin-top:0.9412vw;
+    }
+
+    .golist {
+        width:21.6471vw;
+        height:7.0588vw;
+        border-radius: 1.5686vw;
+        line-height: 7.0588vw;
+        font-size:0.8rem;
+        margin:0 auto;
+        margin-top:11.1373vw;
+        cursor: pointer;
+    }
+}
+
+@media (min-width:320px) and (max-width:649px) {
+    .refund-title {
+        border-bottom: 1.0256vw solid #EC5937;
+        padding-bottom:2.5641vw;
+    }
+    .success-text {
+        margin-top:17.9487vw;
+        font-size:2.4rem;
+    }
+
+    .refund-info {
+        width:59.2308vw;
+        margin:0 auto;
+        font-size:1.2rem;
+        margin-top:5.3846vw;
+    }
+
+    .golist {
+        width:63.5897vw;
+        height:12.8205vw;
+        border-radius: 3.8462vw;
+        line-height:12.8205vw;
+        font-size:1.2rem;
+        margin:0 auto;
+        margin-top:17.9487vw;
+        margin-bottom:12.8205vw;
+    }
+}

@@ -14,12 +14,16 @@
     <script>
         $(document).ready(function(){
            $(".refund-btn").click(function(){
-                if($(".refund-chk").is(":checked") == false){
+                if($(".reason-btn").is(":checked") == false){
                     alert("체크해라");
                 }else{
                     alert("체크함");
                 }
            });
+
+           $(".back-btn").click(function (){
+                history.back();
+           })
         });
     </script>
     <div class="contents-area d-f">
@@ -53,22 +57,22 @@
 
                     <table>
                         <tr>
-                            <th><input id="product-error" type="checkbox"></th>
+                            <th><input id="product-error" class="reason-btn" type="checkbox"></th>
                             <td><label for="product-error">상품 착오</label></td>
                         </tr>
                         <tr>
-                            <th><input id="shipping-error" type="checkbox"></th>
+                            <th><input id="shipping-error"class="reason-btn" type="checkbox"></th>
                             <td><label for="shipping-error">배송 문제</label></td>
                         </tr>
 
                         <tr>
-                            <th><input id="etc" type="checkbox"></th>
+                            <th><input id="etc" class="reason-btn" type="checkbox"></th>
                             <td><label for="etc">기타</label></td>
                         </tr>
                     </table>
 
                     <div class="reason ft-w-b">상세 사유를 적어주세요.</div>
-                    <textarea class="reason-text"></textarea>
+                    <textarea class="reason-text" placeholder="상세한 사유를 적어주세요."></textarea>
                     <div class="btn-wrap">
                         <div class="bg-c-orange refund-btn">제출하기</div>
                         <div class="ft-c-o back-btn ft-w-b pc">뒤로가기</div>

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <link href="/static/css/Cart.css" rel="stylesheet">
-    <title>장바구니</title>
+    <link href="/static/css/refund.css" rel="stylesheet">
+    <link href="/static/css/refund-total.css" rel="stylesheet">
+    <link href="/static/css/delivery-insert.css" rel="stylesheet">
+    <title>배송지 입력</title>
 
 </head>
 <body>
@@ -34,36 +36,39 @@
         </section>
 
         <section class="manage-info">
-            <section class="menu-title ft-w-b">
-                <img src="/static/images/cart.png">
-                장바구니
+            <section class="menu-title ft-w-b">취소/환불 신청</section>
+
+            <section class="workstep-box">
+                <span class="selected">상품 선택</span>
+                <img src="/static/images/workstep-arrow.png">
+                <span>사유 선택</span>
+                <img src="/static/images/workstep-arrow.png">
+                <span>취소신청 완료</span>
             </section>
 
             <section class="refund-list">
+                <b>선택하신 상품과 배송/회수 정보를 확인해주세요.</b>
 
                    <table>
                         <thead>
                             <tr>
-                                <th><input type="checkbox"></th>
-                                <th></th>
+                                <th>선택한 상품 2건</th>
                                 <th>상품정보</th>
+                                <th>수량</th>
                                 <th>상품금액</th>
-                                <th>할인적용금액</th>
-                                <th>상품수량</th>
-                                <th></th>
+                                <th>배송상태</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input class="refund-chk" type="checkbox"></td>
                                 <td class="book-img"><img src="/static/images/yellow-book.png"></td>
                                 <td class="book-info">
                                     <div class="level">Basic</div>
                                     <div class="book-nm ft-w-b">LISTENING 1</div>
                                     <div class="category">for Teachers</div>
                                 </td>
-                                <td class="price">
-                                    19,999원
+                                <td class="number">
+                                    <span class="mobile-display-block">수량 :</span> 1</span>
                                 </td>
                                 <td class="price-info">
                                     <div class="sale-price">
@@ -72,24 +77,18 @@
                                         <span>원</span>
                                     </div>
                                 </td>
-                                <td class="book-count ft-w-b">
-                                    <div><img src="/static/images/minus.png"></div>
-                                    <input type="number">
-                                    <div><img src="/static/images/plus.png"></div>
-                                </td>
-                                <td class="remove"><img src="/static/images/remove.png"></td>
+                                <td class="shipping ft-w-b">배송준비중</td>
                             </tr>
 
                             <tr>
-                                <td><input class="refund-chk" type="checkbox"></td>
                                 <td class="book-img"><img src="/static/images/yellow-book.png"></td>
                                 <td class="book-info">
                                     <div class="level">Basic</div>
                                     <div class="book-nm ft-w-b">LISTENING 1</div>
                                     <div class="category">for Teachers</div>
                                 </td>
-                                <td class="price">
-                                    19,999원
+                                <td class="number">
+                                    <span class="mobile-display-block">수량 :</span> 1</span>
                                 </td>
                                 <td class="price-info">
                                     <div class="sale-price">
@@ -98,11 +97,33 @@
                                         <span>원</span>
                                     </div>
                                 </td>
-                                <td class="shipping ft-w-b"></td>
-                                <td class="remove"><img src="/static/images/remove.png"></td>
+                                <td class="shipping ft-w-b">
+                                    <span>배송완료</span>
+                                    <p class="shipping-date">10/26(화) 도착</p>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
+
+                    <div class="delivery-addr">
+                        <b>회수 및 교환 정보를 확인해주세요.</b>
+
+                        <p class="ft-w-b">상품 회수지</p>
+
+                        <div class="basic-addr">조선민주주의인민공화국 평양특별시 맥도날드 302호</div>
+                        <div class="addr-note ft-c-o">*계정에 등록된 주소를 확인해주세요.</div>
+
+                        <p class="ft-w-b">상품 배송지</p>
+                        <div class="shipping-addr">
+                            <span class="addr">조선민주주의인민공화국 평양특별시 맥도날드 302호</span>
+                            <span class="change ft-w-b ft-c-o">변경하기</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <div class="bg-c-orange refund-btn">제출하기</div>
+                        <div class="border-orange ft-c-o back-btn ft-w-b pc">뒤로가기</div>
+                    </div>
             </section>
         </section>
     </div>

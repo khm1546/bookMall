@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<script>
+    function goBack(){
+        history.back();
+    }
+</script>
     <div id="footer">
         <img src="/static/images/mobile-banner.png" class="mobile-banner">
         <div class="footer-banner-bar">
@@ -65,6 +70,6 @@
             <span class="amount-cart">1</span>
         </div>
     </div>
-    <button class="page-prev"><a href="#" class="move-prev"><p></p></a></button>
+    <button class="page-prev" onClick="goBack()"></button>
 </body>
 </html>

@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.buy-info-wrap {
+    width:1194px;
+    text-align:center;
+    margin-top:80px;
+}
+
+.buy-info {
+    width:400px;
+    margin:0 auto;
+    font-size:14px;
+    margin-top:20px;
+    display:flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+
+@media (min-width:650px) and (max-width:1275px) {
+    .buy-info-wrap {
+        width:93.6471vw;
+        margin-top:6.2745vw;
+        font-size:1rem;
+    }
+
+    .buy-info {
+        width:31.3725vw;
+        margin:0 auto;
+        font-size:0.4rem;
+        margin-top:1.5686vw;
+    }
+}
+
+@media (min-width:320px) and (max-width:649px) {
+    .title-wrap {
+        width:93.7% !important;
+        margin:0 auto;
+        border-bottom:0.5128vw solid #EC5937;
+        display:block !important;
+        margin-top:4.6154vw;
+        padding-bottom:2.0513vw;
+    }
+
+    .title-box {
+        width:auto !important;
+        height:auto !important;
+        background:none !important;
+        color:#000 !important;
+        font-size:1.4rem !important;
+        text-align: left !important;
+        font-weight:bold;
+        line-height:4.1026vw !important;
+
+    }
+
+    .workstep {
+        display:none;
+    }
+
+    .buy-info-wrap {
+        width:93.7%;
+        margin:0 auto;
+        text-align:center;
+        margin-top:12.8205vw;
+    }
+
+    .buy-note {
+        font-size:1.9rem;
+    }
+
+    .buy-info {
+        width:60%;
+        margin:0 auto;
+        font-size:1rem;
+        margin-top:2.0513vw;
+        display:flex;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+}

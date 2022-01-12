@@ -27,6 +27,21 @@ def reason():
 
     return render_template("/mypage/refund-reason.html")
 
+@app.route("/refund-success")
+def refund_success():
+
+    return render_template("/mypage/refund-success.html")
+
+@app.route("/delivery-insert")
+def delivery_insert():
+
+    return render_template("/mypage/delivery-insert.html")
+
+@app.route("/buy-success")
+def buy_success():
+
+    return render_template("/mypage/buy-success.html")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 

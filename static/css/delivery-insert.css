@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+
+.delivery-addr {
+    width:931px;
+    height:373px;
+    background: #F3F3F3;
+    border-top:4px solid #EC5937;
+    margin-top:60px;
+    padding:40px;
+}
+
+.delivery-addr > b {
+    font-size:24px;
+}
+
+.delivery-addr > p{
+    margin-top:40px;
+    font-size:20px;
+}
+
+.basic-addr {
+    font-size:18px;
+    margin-top:24px;
+}
+
+.addr-note {
+    font-size:12px;
+    margin-top:10px;
+}
+
+.shipping-addr {
+    margin-top:24px;
+}
+
+.change {
+    margin-left:50px;
+}
+
+.shipping-date {
+    font-weight: normal;
+}
+
+
+@media (min-width:650px) and (max-width:1275px) {
+    .delivery-addr {
+        width:73.0196vw;
+        height:29.2549vw;
+        background: #F3F3F3;
+        border-top:0.3137vw solid #EC5937;
+        margin-top:4.7059vw;
+        padding:3.1373vw;
+    }
+
+    .delivery-addr > b {
+        font-size:1.8824vw;
+    }
+
+    .delivery-addr > p{
+        margin-top:3.1373vw;
+        font-size:0.8rem;
+    }
+
+    .basic-addr {
+        font-size:0.6rem;
+        margin-top:1.8824vw;
+    }
+
+    .addr-note {
+        font-size:0.4rem;
+        margin-top:0.7843vw;
+    }
+
+    .shipping-addr {
+        font-size:0.6rem;
+        margin-top:1.8824vw;
+    }
+
+    .change {
+        margin-left:3.9216vw;
+    }
+}
+
+@media (min-width:320px) and (max-width:649px) {
+
+
+    thead {
+        display: block !important;
+        border: none !important;
+    }
+
+    thead > tr > th:nth-child(1) {
+        width: 100%;
+        padding-left: 7vw;
+        padding-bottom: 0;
+        display: block;
+    }
+
+    thead > tr > th {
+        display: none;
+    }
+
+
+    .delivery-addr {
+        width: 100%;
+        height: 48.7179vw;
+        background: #F3F3F3;
+        border-top: 1.0256vw solid #EC5937;
+        margin-top: 8.9744vw;
+        padding: 4.6154vw;
+    }
+
+    .delivery-addr > b {
+        font-size: 1.5rem;
+    }
+
+    .delivery-addr > p {
+        margin-top: 5.6410vw;
+        font-size: 1.2rem;
+    }
+
+    .basic-addr {
+        font-size: 1.1rem;
+        margin-top: 1.8824vw;
+    }
+
+    .addr-note {
+        font-size: 1rem;
+        margin-top: 0.7843vw;
+    }
+
+    .shipping-addr {
+        font-size: 1.1rem;
+        margin-top: 1.8824vw;
+    }
+
+    .change {
+        margin-left: 3.9216vw;
+    }
+
+    .shipping {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+    }
+
+    .shipping-date {
+        display: inline-block;
+    }
+}

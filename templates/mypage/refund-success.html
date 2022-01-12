@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="/static/css/refund-success.css" rel="stylesheet">
+    <link href="/static/css/refund-total.css" rel="stylesheet">
+    <title>취소/환불 신청 (완료)</title>
+
+</head>
+<body>
+    {% include 'header.html' %}
+    <script>
+        $(document).ready(function(){
+
+
+           $(".back-btn").click(function (){
+                history.back();
+           })
+        });
+    </script>
+    <div class="contents-area d-f">
+        <section class="mypage-menu">
+                <h2 class="mypage-title">마이페이지</h2>
+
+                <ul class="mypage-list">
+                    <li class="mypage-item">주문내역 관리</li>
+                    <li class="mypage-item">장바구니</li>
+                    <li class="mypage-item">취소/반품/교환 조회</li>
+                    <li class="mypage-item text-active">회원 정보</li>
+                </ul>
+        </section>
+
+        <section class="manage-info">
+            <section class="menu-title ft-w-b">취소/환불 신청</section>
+
+            <section class="workstep-box">
+                <span >상품 선택</span>
+                <img src="/static/images/workstep-arrow.png">
+                <span>사유 선택</span>
+                <img src="/static/images/workstep-arrow.png">
+                <span class="selected">취소신청 완료</span>
+            </section>
+
+            <section class="refund-list">
+                <div class="refund-title">
+                    <b>취소 신청 완료</b>
+                </div>
+
+                <section class="success-text">
+                    <span class="ft-c-o">신청이 완료</span>
+                    <span>되었습니다.</span>
+                    <div class="refund-info">
+                        <span>
+                            주문일
+                            <span class="buy-date">2021.08.25</span>
+                        </span>
+                        <span>
+                            주문번호
+                            <span class="buy-num">123456789</span>
+                        </span>
+                    </div>
+                </section>
+
+                <div class="golist bg-c-orange ft-c-w">주문내역 가기</div>
+            </section>
+        </section>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

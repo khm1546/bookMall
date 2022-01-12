@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.stick-area {
+    display:none;
+}
+
 input[type='checkbox'] {
     width:25px;
     height:25px;
@@ -74,13 +78,11 @@ input[type='checkbox'] {
 
 @media (min-width:650px) and (max-width:1275px) {
 
-        .refund-list {
+.refund-list {
     margin-top:1.7255vw;
-}
-
-.refund-list > b {
     font-size:0.6rem;
 }
+
 
 .menu-title {
     font-size:0.8rem;
@@ -141,12 +143,9 @@ input[type='checkbox'] {
 
 .refund-list {
     margin-top:8.4615vw;
-
+font-size:1.5rem;
 }
 
-.refund-list > b {
-    font-size:1.5rem;
-}
 
 
 .menu-title {
@@ -185,7 +184,7 @@ input[type='checkbox'] {
         color:#FFFFFF;
         border-radius:3.8462vw;
         margin: 0 auto;
-        margin-top:42.3077vw;
+        margin-top:15.3846vw;
         margin-bottom:37.6923vw;
     }
 

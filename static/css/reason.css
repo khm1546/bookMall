@@ -104,7 +104,7 @@
 }
 
 .reason-wrap > table {
-    margin-top:6.4103vw;
+    margin-top:0;
     font-size:1.4rem
 }
 .reason-wrap > table tr {
@@ -123,6 +123,7 @@
 .reason-text {
     width:100%;
     padding:2.5641vw;
+    font-size:1.5rem;
 }
 
 }

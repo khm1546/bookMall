@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/static/css/buy.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <link href="/static/css/buy-success.css" rel="stylesheet">
+    <title>주문/결제</title>
+</head>
+<body>
+<script>
+        function goAddr(){
+		    new daum.Postcode({
+		        oncomplete: function(data) {
+					$(".addr1").val(data.address);
+                    $(".zip").val(dta.azonecode);
+		        }
+		    }).open();
+		}
+</script>
+    <div id="wrap">
+        {% include 'header.html' %}
+
+        <div class="contents-area">
+            <div class="title-wrap pc">
+                <div class="title-box bg-c-orange ft-c-w">주문완료</div>
+
+                <div class="workstep">
+                    <span>장바구니</span>
+                    <img src="/static/images/deo-view.png">
+                    <span>주문/결제</span>
+                    <img src="/static/images/deo-view.png">
+                    <span class="selceted">주문완료</span>
+                </div>
+            </div>
+            <div class="buy-info-wrap">
+                <div class="buy-note"><b class="ft-c-o">주문이 완료</b>되었습니다. 감사합니다.</div>
+                <div class="buy-info">
+                    <span>
+                        주문일
+                        <span class="buy-date">2021.08.25</span>
+                    </span>
+                    <span>
+                        주문번호
+                        <span class="buy-code">123456789</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        {% include 'footer.html' %}
+    </div>
+
+<script>
+    $(document).ready(function (){
+        $(".qna").hover(function(){
+            $(".qna-answer").show();
+        }, function (){
+            $(".qna-answer").hide();
+        });
+    });
+</script>
+</body>
+</html>

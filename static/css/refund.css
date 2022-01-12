@@ -129,6 +129,7 @@ input[type='checkbox'] {
         width:89.7436vw;
         font-size:1.5rem;
         border-top:0.5128vw solid #EC5937;
+        margin-top:2.5641vw;
     }
 
     .refund-list > table > thead {
@@ -143,9 +144,15 @@ input[type='checkbox'] {
 
     }
 
+    .refund-list > table th{
+        width:17%;
+        padding: 3.8462vw;
+    }
+
     .refund-list > table td{
         width:auto;
         padding:6.9231vw;
+        padding-right:0;
         text-align: left !important;
     }
 
