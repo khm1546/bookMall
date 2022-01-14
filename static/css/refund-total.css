@@ -54,7 +54,7 @@ input[type='checkbox'] {
     line-height: 60px;
     border-radius: 20px;
     cursor: pointer;
-    border:1px solid #EC5937;
+    border:1px solid #EC5937 !important;
 }
 
 .btn-wrap {

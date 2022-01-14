@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="/static/css/buy.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     {% include 'header-hd.html' %}
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <link href="/static/css/buy-success.css" rel="stylesheet">
     <title>주문/결제</title>
 </head>
 <body>
+{% include 'header.html' %}
 <script>
         function goAddr(){
 		    new daum.Postcode({
@@ -31,7 +30,7 @@
                     <img src="/static/images/deo-view.png">
                     <span>주문/결제</span>
                     <img src="/static/images/deo-view.png">
-                    <span class="selceted">주문완료</span>
+                    <span class="selected">주문완료</span>
                 </div>
             </div>
             <div class="buy-info-wrap">
@@ -47,6 +46,63 @@
                     </span>
                 </div>
             </div>
+            <div class="gobtn-wrap">
+                <div class="go-shopping ft-c-o ft-w-b">쇼핑 계속하기</div>
+                <div class="go-cart bg-c-orange ft-w-b">장바구니 가기</div>
+            </div>
+            <div class="table-wrap">
+                    <table class="buy-human-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">받는 사람 정보</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>이름</th>
+                                <td>김토셀</td>
+                            </tr>
+                            <tr>
+                                <th>배송주소</th>
+                                <td>(24601) 서울특별시 성북구 고려대로 21길 3-39 6301호 서울특별시 성북구 고려대로 21길 3-39 6301호  </td>
+                            </tr>
+                            <tr>
+                                <th>전화번호</th>
+                                <td>010-1234-5678</td>
+                            </tr>
+                            <tr>
+                                <th>배송 요청사항</th>
+                                <td>나는 집가고싶다 언제 갈지모르겠다</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                                <table class="buy-human-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2"><span>결제정보</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>상품금액</th>
+                                <td>99,999원</td>
+                            </tr>
+                            <tr>
+                                <th>배송비</th>
+                                <td>3500원</td>
+                            </tr>
+                            <tr>
+                                <th>할인금액</th>
+                                <td>99,999원</td>
+                            </tr>
+                            <tr>
+                                <th>총 결제 금액</th>
+                                <td class="ft-c-o ft-w-b">99,999,999,999원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
         </div>
 
         {% include 'footer.html' %}

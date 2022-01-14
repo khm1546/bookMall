@@ -16,6 +16,70 @@
     font-weight: bold;
 }
 
+.go-shopping {
+    width: 276px;
+    height: 90px;
+    border:3px solid #EC5937;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    font-size:26px;
+    line-height:90px;
+    text-align:center;
+    background: #FDFDFD;
+}
+
+
+.go-cart {
+    width: 276px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    font-size:26px;
+    color:#FFFFFF;
+}
+
+.gobtn-wrap {
+    width:582px;
+    display: flex;
+    margin:0 auto;
+    justify-content: space-between;
+    margin-top:45px;
+    background: #FDFDFD;
+}
+.buy-human-table {
+    width:595px;
+    margin-top:80px;
+}
+
+.buy-human-table thead {
+    text-align: left;
+    border-bottom:4px solid #EC5937;
+    font-size:24px;
+    height:40px;
+    padding-bottom:15px;
+}
+
+.buy-human-table > tbody th {
+    width:137px;
+    font-size:18px;
+    height:55px;
+    background: #F3F3F3;
+}
+
+.buy-human-table > tbody td{
+    width:458px;
+    font-size:16px;
+    height:55px;
+    padding-left:15px;
+    padding-right:20px;
+}
+
+.table-wrap {
+    display: flex;
+    justify-content: space-between;
+}
 
 @media (min-width:650px) and (max-width:1275px) {
     .buy-info-wrap {
@@ -29,6 +93,61 @@
         margin:0 auto;
         font-size:0.4rem;
         margin-top:1.5686vw;
+    }
+
+    .go-shopping {
+        width: 21.6471vw;
+        height: 7.0588vw;
+        border:0.2353vw solid #EC5937;
+        box-shadow: 0.0000vw 0.2353vw 0.5490vw rgba(0, 0, 0, 0.07);
+        border-radius: 1.5686vw;
+        line-height:7.0588vw;
+        font-size:0.8rem;
+    }
+
+
+    .go-cart {
+        width: 21.6471vw;
+        height: 7.0588vw;
+        line-height: 7.0588vw;
+        box-shadow: 0.0000vw 0.2353vw 0.5490vw rgba(0, 0, 0, 0.07);
+        border-radius: 1.5686vw;
+        font-size:0.8rem;
+    }
+
+    .gobtn-wrap {
+        width:45.6471vw;
+        margin:0 auto;
+        margin-top:3.5294vw;
+        font-size:0.8rem;
+    }
+
+    .buy-human-table {
+        width:46.6667vw;
+        margin-top:6.2745vw;
+    }
+
+    .buy-human-table thead {
+
+        border-bottom:0.3137vw solid #EC5937;
+        font-size:1.8824vw;
+        height:3.1373vw;
+        padding-bottom:1.1765vw;
+    }
+
+    .buy-human-table > tbody th {
+        width:10.7451vw;
+        font-size:0.6rem;
+        height:4.3137vw;
+        background: #F3F3F3;
+    }
+
+    .buy-human-table > tbody td{
+        width:35.9216vw;
+        font-size:0.5rem;
+        height:4.3137vw;
+        padding-left:1.1765vw;
+        padding-right:1.5686vw;
     }
 }
 
@@ -79,4 +198,60 @@
         font-weight: bold;
     }
 
+    .gobtn-wrap {
+        width:100%;
+        border-top:0.2564vw solid #F3F3F3;
+        height:70px;
+        padding:3.0769vw;
+        position: fixed;
+        bottom:17.9487vw;
+    }
+
+
+    .go-shopping {
+        width:45.8974vw;
+        height:12.3077vw;
+        line-height:12.3077vw ;
+        border-radius: 2.3077vw;
+        border:0.2564vw solid #EC5937;
+        font-size:1.5rem;
+    }
+
+    .go-cart {
+         width:45.8974vw;
+        height:12.3077vw;
+        line-height:12.3077vw ;
+        border-radius: 2.3077vw;
+        font-size:1.5rem;
+    }
+
+    .table-wrap {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .buy-human-table {
+        width:93.7%;
+        margin:0 auto;
+        margin-top:11.5385vw;
+    }
+
+    .buy-human-table thead {
+        border-bottom:0.5128vw solid #EC5937;
+        font-size:1.7rem;
+        height:10.2564vw;
+    }
+
+    .buy-human-table > tbody th {
+        width:19.4872vw;
+        font-size:1.3rem;
+        height:10.2564vw;
+    }
+
+    .buy-human-table > tbody td{
+        width:70.2564vw;
+        font-size:1.2rem;
+         height:10.2564vw;
+        padding-left:3.8462vw;
+    }
 }

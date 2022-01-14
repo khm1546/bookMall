@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <link href="/static/css/buy.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    {% include 'header-hd.html' %}
     <title>주문/결제</title>
 </head>
 <body>
+{% include 'header.html' %}
 <script>
         function goAddr(){
 		    new daum.Postcode({
@@ -208,15 +208,14 @@
                     </div>
                 </div>
             </div>
+            </div>
 
                 <div class="btn-wrap mobile-display-block">
                     <div class="btn cart-btn ft-c-o border-orange bg-c-white cursor ft-w-b">장바구니 가기</div>
                     <div class="btn buy-btn bg-c-orange ft-c-w cursor ft-w-b">결제하기</div>
                 </div>
-            </div>
-
         </div>
-
+         {% include 'footer.html' %}
     </div>
 
 <script>
@@ -226,6 +225,10 @@
         }, function (){
             $(".qna-answer").hide();
         });
+
+        var stickyHeight = $(".buy-info").height();
+
+        $(".buy-price").css("height",stickyHeight + "px");
     });
 </script>
 </body>

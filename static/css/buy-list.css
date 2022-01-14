@@ -1,0 +1,418 @@
+@charset "utf-8";
+
+.menu-title {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.buy-search {
+	width: 931px; height: 39px; background: #fff;
+	position: relative; border-radius: 47px; outline: none;
+    margin-top:32px;
+}
+.buy-search > input {
+	width: 931px; outline: none; float: left; height: 100%;
+	border: 2.5px solid #DFDFDF; border-radius: 47px;
+	padding: 12px ; font-size: 0.5rem;
+    padding-left:40px;
+}
+.buy-search > button {
+	width: 127px; height: 100%; border: 1px solid transparent; background: #EC5937;
+	outline: none; color: #fff; border-radius: 47px; position: absolute;
+	top: 0; right: 0; color: #FFF7EC; font-size: 0.5rem; line-height: 20px;
+	cursor: pointer;
+}
+.buy-search .search-img {
+	position: absolute; top: 25%; left: 2%; width: 19.5px; height: 19px;
+	cursor: pointer;
+}
+
+.category {
+    margin-top:20px;
+    display:flex;
+    align-items: center;
+}
+
+.category > ul > li:first-child {
+    margin-left:0;
+}
+
+.category > ul > li {
+    float:left;
+    width:115px;
+    height:30px;
+    border:2px solid #EC5937;
+    border-radius: 47px;
+    font-size:12px;
+    text-align: center;
+    line-height: 30px;
+    color:#EC5937;
+    margin-left:15px;
+    cursor: pointer;
+}
+
+.category .active {
+    background: #EC5937;
+    color:#FFFFFF;
+}
+
+.order-count {
+    width:931px;
+    height:141px;
+    margin-top:24px;
+}
+
+.order-count li {
+    width:308px;
+    float:left;
+    height:141px;
+    background:#F3F3F3;
+    text-align: center;
+    vertical-align: middle;
+    border-right:3px solid #FFFFFF;
+    border-bottom:2px solid #EC5937;
+}
+
+.order-title {
+    margin-top:36px;
+    font-size:18px;
+}
+
+
+
+.count-wrap {
+    font-size:33px;
+    margin-top:24px;
+}
+
+.count-wrap > span:last-child {
+    font-size:16px;
+}
+
+.buy-info-wrap {
+    margin-top:59px;
+}
+
+.buy-info-wrap > .buy-date {
+    margin-left:20px;
+    font-size:0.7rem;
+    font-weight:bold;
+}
+
+.buy-table {
+    width: 931px;
+    border-radius: 30px;
+    margin-top:15px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #DFDFDF;
+    border-collapse :collapse ;
+}
+
+.buy-table thead {
+    font-size:0.5rem;
+    border-bottom: 2px solid #F3F3F3;
+    height:50px;
+}
+
+.buy-table thead th:nth-child(2) {
+    text-align: left;
+}
+
+.buy-table thead th:last-child {
+    font-size:0.4rem;
+}
+
+.buy-table tbody td:nth-child(2) {
+    text-align: left;
+}
+
+.buy-table tbody td {
+    width:15%;
+}
+
+.buy-table img {
+     width: 100px;
+    height: 132px;
+    filter: drop-shadow(0px 3px 7px rgba(0, 0, 0, 0.25));
+}
+
+.buy-table tbody td:first-child {
+    padding:25px;
+}
+
+.buy-table tbody td {
+    font-size:0.5rem;
+    text-align: center;
+}
+
+.buy-table tbody tr {
+    border-bottom:2px solid #F3F3F3;
+}
+ tbody td span:last-child{
+    margin-left:10px;
+}
+
+.book-category {
+    font-size:0.4rem;
+}
+
+.book-price {
+    margin-top:19px;
+}
+
+.book-price span:last-child {
+    font-size:0.4rem;
+
+}
+
+table .btn {
+        border-radius: 10px;
+    width:103px;
+    height:37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:0.4rem;
+    font-weight: bold;
+    margin:0 auto;
+    cursor: pointer;
+}
+
+.shpping-view {
+    border:2px solid #EC5937;
+    color:#EC5937;
+}
+
+.btn img {
+    width:11px;
+    height:11px;
+}
+
+.black-btn {
+    border: 2px solid #DFDFDF;
+    border-radius: 10px;
+    margin-top:10px !important;
+}
+
+.no-shipping table tbody td .btn {
+    float:left;
+    margin-left:10px;
+    margin-top:10px;
+}
+.view-add {
+    position: relative;
+}
+
+.view-add div {
+    float:right !important;
+}
+
+@media (min-width:650px) and (max-width:1275px) {
+    .menu-title {
+        font-size: 0.8rem;
+        margin-top: 1.5686vw;
+    }
+
+    .buy-search {
+        width: 73.0196vw; height: 3.0588vw; background: #fff;
+         border-radius: 3.6863vw; outline: none;
+        margin-top:2.5098vw;
+    }
+    .buy-search > input {
+        width: 73.0196vw; outline: none;  height: 100%;
+        border: 0.1961vw solid #DFDFDF; border-radius: 3.6863vw;
+        padding: 0.9412vw ; font-size: 0.5rem;
+        padding-left:3.1373vw;
+    }
+    .buy-search > button {
+        width: 9.9608vw; height: 100%; border: 0.0784vw solid transparent; background: #EC5937;
+        outline: none;  border-radius: 3.6863vw;
+        top: 0; right: 0;  font-size: 0.5rem; line-height: 1.5686vw;
+        cursor: pointer;
+    }
+    .buy-search .search-img {
+         top: 25%; left: 2%; width: 1.5294vw; height: 1.4902vw;
+        cursor: pointer;
+    }
+        .category {
+        margin-top:1.5686vw;
+        align-items: center;
+    }
+
+    .category > ul > li:first-child {
+        margin-left:0;
+    }
+
+    .category > ul > li {
+        width:9.0196vw;
+        height:2.3529vw;
+        border:0.1569vw solid #EC5937;
+        border-radius: 3.6863vw;
+        font-size:0.4rem;
+        line-height: 2.3529vw;
+        margin-left:1.1765vw;
+        cursor: pointer;
+    }
+
+    .category .active {
+        background: #EC5937;
+    }
+    .order-count {
+        width:73.0196vw;
+        height:11.0588vw;
+        margin-top:1.8824vw;
+    }
+
+    .order-count li {
+        width:24.1569vw;
+        height:11.0588vw;
+        background:#F3F3F3;
+        border-right:0.2353vw solid #FFFFFF;
+        border-bottom:0.1569vw solid #EC5937;
+    }
+
+    .order-title {
+        margin-top:2.8235vw;
+        font-size:0.6rem;
+    }
+    .count-wrap {
+        font-size:1rem;
+        margin-top:1.8824vw;
+    }
+
+    .count-wrap > span:last-child {
+        font-size:0.5rem;
+    }
+
+    .buy-table {
+        width: 73.0196vw;
+        border-radius: 2.3529vw;
+        margin-top:1.1765vw;
+        border-style: hidden;
+        box-shadow: 0 0 0 0.0784vw #DFDFDF;
+
+    }
+
+    .buy-table thead {
+        font-size:0.5rem;
+        border-bottom: 0.1569vw solid #F3F3F3;
+        height:3.9216vw;
+    }
+
+    .buy-table thead th:last-child {
+        font-size:0.4rem;
+    }
+
+    .buy-table tbody td {
+        width:15%;
+    }
+
+    .buy-table img {
+         width: 7.8431vw;
+        height: 10.3529vw;
+        filter: drop-shadow(0.0000vw 0.2353vw 0.5490vw rgba(0, 0, 0, 0.25));
+    }
+
+    .buy-table tbody td:first-child {
+        padding:1.9608vw;
+    }
+
+    .buy-table tbody td {
+        font-size:0.5rem;
+
+    }
+
+    .buy-table tbody tr {
+        border-bottom:0.1569vw solid #F3F3F3;
+    }
+     tbody td span:last-child{
+        margin-left:0.7843vw;
+    }
+
+    .book-price {
+        margin-top:1.4902vw;
+    }
+
+    table .btn {
+        border-radius: 0.7843vw;
+        width:8.0784vw;
+        height:2.9020vw;
+        align-items: center;
+        font-size:0.4rem;
+        margin:0 auto;
+        cursor: pointer;
+    }
+
+    .shpping-view {
+        border:0.1569vw solid #EC5937;
+    }
+
+    .btn img {
+        width:0.8627vw;
+        height:0.8627vw;
+    }
+
+    .black-btn {
+        border: 0.1569vw solid #DFDFDF;
+        border-radius: 0.7843vw;
+        margin-top:0.7843vw !important;
+    }
+
+    .no-shipping table tbody td .btn {
+        margin-left:0.7843vw;
+        margin-top:0.7843vw;
+    }
+}
+
+
+@media (min-width:320px) and (max-width:649px) {
+    .menu-title {
+        display:none;
+    }
+
+    .buy-search {
+        width: 89.7436vw; height: 8.7179vw; background: #fff;
+         border-radius: 3.6863vw; outline: none;
+        margin-top:5.1282vw;
+    }
+    .buy-search > input {
+        width: 89.7436vw; outline: none;  height: 100%;
+        border: 0.1961vw solid #DFDFDF; border-radius: 3.6863vw;
+        padding: 0.9412vw ; font-size: 1.2rem;
+        padding-left:3.1373vw;
+    }
+    .buy-search > button {
+        width: 19.4872vw; height: 100%; border: 0.0784vw solid transparent; background: #EC5937;
+        outline: none;  border-radius: 12.0513vw;
+        top: 0; right: 0;  font-size: 1.2rem; line-height: 1.5686vw;
+        cursor: pointer;
+    }
+    .buy-search .search-img {
+         display:none;
+    }
+
+    .category {
+        margin-top:6.4103vw;
+        display: block;
+    }
+
+    .category > ul > li:first-child {
+        margin-left:0;
+    }
+
+    .category > ul > li {
+        width:21.0256vw;
+        height:7.4359vw;
+        border:0.2564vw solid #EC5937;
+        border-radius: 3.6863vw;
+        font-size:1.2rem;
+        line-height: 7.4359vw;
+        margin-left:1.1765vw;
+        cursor: pointer;
+        float:left;
+    }
+
+    .order-count {
+        display:none;
+    }
+}
