@@ -12,41 +12,96 @@
     {% include 'header.html' %}
     <script>
 
-       $.datepicker.setDefaults({
-            dateFormat: 'yy-mm-dd',
-            prevText: '이전 달',
-            nextText: '다음 달',
-            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-            showMonthAfterYear: true,
-            yearSuffix: '년',
-           showOn: "both"
-        });
-
 
 
     $(document).ready(function(){
-
-        var newDate = new Date();
-
-        var year = newDate.getFullYear();
-        var month = newDate.getMonth();
-        var day = newDate.getDate();
-
-
-
-
-        $(".ui-datepicker-trigger").text("");
         $(".category li").click(function(){
             $(".category li").removeClass("active");
             $(this).addClass("active");
         });
-    });
 
+
+
+        $("#mask").css("height", $("body").height() + "px");
+        $("#mask").css("width", $("body").width() + "px");
+
+
+        $(".popup").click(function (){
+            $("#mask").show();
+            $("#popup").show();
+            var menu = $(this).data("menu");
+
+            var html = '';
+
+            if(menu == "info"){
+                $(".text-title").text("주문 상세");
+                    html += "<tr>";
+                    html +=     "<td class='book-img'>" + "<img src='/static/images/yellow-book.png'>" + "</td>"
+                    html +=     "<td>";
+                    html +=         "<div class='level'>" + "BASIC" + "</div>";
+                    html +=         "<div class='book-nm ft-w-b'>" + "READING SERIES" + "</div>";
+                    html +=         "<div class='book-category'>" + "for Teachers" + "</div>";
+                    html +=     "</td>";
+                    html +=     "<td>" + "1" + "</td>";
+                    html +=     "<td class='ft-w-b'>" + "19,000" + "원" + "</td>";
+                    html +=     "<td>";
+                    html +=         "<div class='shipping-workstep ft-w-b'>" + "배송완료" + "</div>";
+                    html +=         "<div class='shipping-date'>" + "10/26(화) 도착" + "</div>";
+                    html +=     "</td>";
+                    html +="</tr>";
+
+                    html += "<tr>";
+                    html +=     "<td class='book-img'>" + "<img src='/static/images/yellow-book.png'>" + "</td>"
+                    html +=     "<td>";
+                    html +=         "<div class='level'>" + "BASIC" + "</div>";
+                    html +=         "<div class='book-nm ft-w-b'>" + "READING SERIES" + "</div>";
+                    html +=         "<div class='book-category'>" + "for Teachers" + "</div>";
+                    html +=    "</td>";
+                    html +=     "<td>" + "1" + "</td>";
+                    html +=     "<td class='ft-w-b'>" + "19,000" + "원" + "</td>";
+                    html +=     "<td>";
+                    html +=         "<div class='shipping-workstep ft-w-b'>" + "배송완료" + "</div>";
+                    html +=         "<div class='shipping-date'>" + "10/26(화) 도착" + "</div>";
+                    html +=     "</td>";
+                    html +="</tr>";
+            }
+
+            $("#popup-content tbody").html(html)
+        });
+    });
+        $(document).on("click", '.close', function(){
+               $("#mask").hide();
+           $("#popup").hide();
+        })
     </script>
+    <div id="mask"></div>
+    <div id="popup">
+        <div class='order-title'>
+            <span class="close m-close"><img src="/static/images/popup-close.png"></span>
+            <span class='title-text'>주문 상세</span>
+            <span class='close pc-close'><img src='/static/images/refund-request.png'></span>
+        </div>
+
+        <div id="popup-content">
+            <table>
+                <thead>
+                        <tr>
+                            <th class="order-number-info">
+                                <span class='sub-title'>주문번호</span>
+                                <span class='order-number'>123456789</span>
+                            </th>
+                            <th>상품정보</th>
+                            <th>수량</th>
+                            <th>상품금액</th>
+                            <th>배송상태</th>
+                        </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div class="contents-area d-f">
         <section class="mypage-menu">
                 <h2 class="mypage-title">마이페이지</h2>
@@ -111,7 +166,7 @@
                             <th>수량</th>
                             <th>배송상태</th>
                             <th></th>
-                            <th class="ft-c-o cursor">주문 상세 보기 ></th>
+                            <th class="ft-c-o cursor popup" data-menu="info">주문 상세 보기 ></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -131,11 +186,11 @@
                             <td class="ft-w-b">배송준비중</td>
                             <td></td>
                             <td>
-                                <div class="shpping-view btn">
+                                <div class="shipping-view btn popup" data-menu="shipping">
                                     <img src="/static/images/search.png">
                                     <span>배송 조회<span>
                                 </div>
-                                <div class="refund-request btn black-btn">
+                                <div class="refund-request btn black-btn" onClick="location.href='/refund'">
                                     <img src="/static/images/refund-request.png">
                                     <span>취소 신청<span>
                                 </div>
@@ -163,7 +218,7 @@
                             <td class="ft-w-b">배송준비중</td>
                             <td></td>
                             <td>
-                                <div class="shpping-view btn">
+                                <div class="shipping-view btn">
                                     <img src="/static/images/search.png">
                                     <span>배송 조회</span>
                                 </div>
@@ -213,18 +268,18 @@
                             <td class="ft-w-b">배송준비중</td>
                             <td></td>
                             <td>
-                                <div class="shpping-view btn">
+                                <div class="shipping-view btn">
                                     <img src="/static/images/search.png">
-                                    <span>배송 조회<span>
+                                    <span>배송 조회</span>
                                 </div>
                                 <div class="refund-request btn black-btn">
                                     <img src="/static/images/refund-request.png">
-                                    <span>취소 신청<span>
+                                    <span>취소 신청</span>
                                 </div>
 
                                 <div class="recart btn black-btn">
                                     <img src="/static/images/cart.png">
-                                    <span>다시 담기<span>
+                                    <span>다시 담기</span>
                                 </div>
                             </td>
                         </tr>
@@ -255,7 +310,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="shpping-view btn">
+                                <div class="shipping-view btn">
                                     <img src="/static/images/search.png">
                                     <span>배송 조회</span>
                                 </div>
@@ -269,7 +324,101 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
 
+            <div class="m-buy-info-wrap">
+                <div class="buy-date">2021. 12. 18 주문</div>
+                <div class="ft-c-o cursor order-view popup" data-menu="info">주문 상세보기 ></div>
+
+                <div class="order-wrap">
+                    <div class="shipping-wrap">
+                        <span class="shipping">배송완료</span>
+                        <span class="shipping-date">10/26(화) 도착</span>
+                    </div>
+
+                    <div class="order-product-info">
+                        <img src="/static/images/yellow-book.png">
+                        <div class="book-info">
+                            <div class="level">Basic</div>
+                            <div class="book-nm ft-w-b">READING SERIES</div>
+                            <div class="book-category">for Teachers</div>
+
+                            <div class="price-info">
+                                <span class="discount">10%</span>
+                                <span class="price"><b>19,000</b>원</span>
+                                <span class="gray-curcle"></span>
+                                <span class="book-count">3개</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <div class="black-btn btn">
+                            <img src="/static/images/cart.png">
+                            <span>다시 담기</span>
+                        </div>
+                        <div class="shipping-view btn">
+                            <img src="/static/images/search.png">
+                            <span>배송 조회</span>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="black-btn btn">
+                            <img src="/static/images/change.png">
+                            <span>교환 신청</span>
+                        </div>
+
+                        <div class="black-btn btn">
+                            <img src="/static/images/cart.png">
+                            <span>반품 신청</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="m-buy-info-wrap">
+                <div class="buy-date">2021. 12. 18 주문</div>
+                <div class="ft-c-o cursor order-view">주문 상세보기 ></div>
+
+                <div class="order-wrap">
+                    <div class="shipping-wrap">
+                        <span class="shipping">배송완료</span>
+                        <span class="shipping-date">10/26(화) 도착</span>
+                    </div>
+
+                    <div class="order-product-info">
+                        <img src="/static/images/yellow-book.png">
+                        <div class="book-info">
+                            <div class="level">Basic</div>
+                            <div class="book-nm ft-w-b">READING SERIES</div>
+                            <div class="book-category">for Teachers</div>
+
+                            <div class="price-info">
+                                <span class="discount">10%</span>
+                                <span class="price"><b>19,000</b>원</span>
+                                <span class="gray-curcle"></span>
+                                <span class="book-count">3개</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap no-shipping">
+                        <div class="black-btn btn">
+                            <img src="/static/images/cart.png">
+                            <span>다시 담기</span>
+                        </div>
+
+                        <div class="black-btn btn refund-request">
+                            <img src="/static/images/refund-request.png">
+                            <span>취소 신청</span>
+                        </div>
+
+                        <div class="shipping-view btn">
+                            <img src="/static/images/search.png">
+                            <span>배송 조회</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
