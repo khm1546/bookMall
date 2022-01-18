@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+#m-popup-content{
+        display:none;
+}
+
 .pc-close {
     float:right;
     cursor: pointer;
@@ -818,39 +822,71 @@ table .btn {
         box-shadow: 0 0 0 0.2564vw #DFDFDF;
     }
 
-    #popup table thead {
-        height:10.2564vw;
+    .order-title {
+        margin-top:1.7949vw;
+        font-size:1.5rem;
     }
 
-    #popup table thead tr th:not(.order-number-info){
+    #pc-popup-content{
         display:none;
     }
 
-    .order-number-info {
-        padding-left:4.3590vw;
-    }
-
-    #popup table tbody td:first-child {
-        padding-left:0px;
-        text-align: center !important;
-    }
-
-    #popup table tbody td {
-        text-align: center;
-    }
-
-    #popup table img {
-        width:17.1795vw;
-        height:22.8205vw;
-    }
-
-    #popup table tbody td:not(.book-img) {
+    #m-popup-content{
         display:block;
     }
 
-    #popup table tbody td {
-        padding-top:0px;
-        padding-bottom:0px;
-        text-align: left;
+    .m-order-wrap {
+        border:0.2564vw solid #DFDFDF;
+        border-radius: 3.8462vw;
+        margin-top:6.4103vw;
+    }
+
+    .m-order-header {
+        font-size:1.4rem;
+        padding:3.8462vw;
+        border-bottom:0.2564vw solid #DFDFDF;
+    }
+
+    .order-number {
+        margin-left:2.5641vw;
+    }
+
+    .order-num-text {
+        border-right:0.2564vw solid #DFDFDF;
+        padding-right:4.1026vw;
+    }
+
+    .m-order-content:first-child {
+        padding-top:3.8462vw;
+    }
+
+    .m-order-content {
+        padding-right:3.8462vw;
+        padding-bottom:3.8462vw;
+        padding-left:3.8462vw;
+    }
+
+    .m-order-wrap .shipping-date {
+        margin-top:0 !important;
+    }
+
+    .m-order-wrap .m-order-content img {
+        width:17.1795vw;
+        height:22.8205vw;
+        filter: drop-shadow(0px 0.7692vw 1.7949vw rgba(0, 0, 0, 0.25));
+    }
+
+    .m-order-wrap .order-book-wrap {
+        margin-top:2.5641vw;
+        display: flex;
+    }
+
+    .m-order-wrap .book-info {
+        margin-left:3.8462vw;
+        font-size:1.4rem;
+    }
+
+    .m-order-wrap .order-info {
+        margin-top:4.6154vw;
     }
 }

@@ -32,6 +32,7 @@
             var menu = $(this).data("menu");
 
             var html = '';
+            var mobileHtml = '';
 
             if(menu == "info"){
                 $(".text-title").text("주문 상세");
@@ -45,7 +46,7 @@
                     html +=     "<td>" + "1" + "</td>";
                     html +=     "<td class='ft-w-b'>" + "19,000" + "원" + "</td>";
                     html +=     "<td>";
-                    html +=         "<div class='shipping-workstep ft-w-b'>" + "배송완료" + "</div>";
+                    html +=         "<div class='shipping ft-w-b'>" + "배송완료" + "</div>";
                     html +=         "<div class='shipping-date'>" + "10/26(화) 도착" + "</div>";
                     html +=     "</td>";
                     html +="</tr>";
@@ -59,14 +60,55 @@
                     html +=    "</td>";
                     html +=     "<td>" + "1" + "</td>";
                     html +=     "<td class='ft-w-b'>" + "19,000" + "원" + "</td>";
-                    html +=     "<td>";
+                    html +=     "<td class='shipping-wrap'>";
                     html +=         "<div class='shipping-workstep ft-w-b'>" + "배송완료" + "</div>";
                     html +=         "<div class='shipping-date'>" + "10/26(화) 도착" + "</div>";
                     html +=     "</td>";
                     html +="</tr>";
+                
+                    mobileHtml +="  <div class='m-order-content'>";
+                    mobileHtml +="      <div class='shipping-wrap'>";
+                    mobileHtml +="          <div class='shipping'>" + "배송완료" + "</div>";
+                    mobileHtml +="          <div class='shipping-date'>" + "10/26(화) 도착" + "</div>";
+                    mobileHtml +="      </div>"
+                    mobileHtml +="      <div class='order-book-wrap'>";
+                    mobileHtml +="          <div class='book-img'><img src='/static/images/" + "yellow-book.png" + "'></div>";
+                    mobileHtml +="          <div class='book-info'>";
+                    mobileHtml +="              <div>" + "BASIC" + "</div>";
+                    mobileHtml +="              <div class='ft-w-b'>" + "READING SERIES" + "</div>";
+                    mobileHtml +="              <div class='book-category'>" + "for Teachers" + "</div>";
+                    mobileHtml +="          <div class='order-info'>";
+                    mobileHtml +="              <span class='order-price'>" + "19,000" + "원</span>";
+                    mobileHtml +="              <span class='gray-curcle'></span>";
+                    mobileHtml +="              <span class='book-count'>3개</span>";
+                    mobileHtml +="          </div>";
+                    mobileHtml +="          </div>";
+                    mobileHtml +="      </div>";
+                    mobileHtml +="  </div>"
+
+                    mobileHtml +="  <div class='m-order-content'>";
+                    mobileHtml +="      <div class='shipping-wrap'>";
+                    mobileHtml +="          <div class='shipping'>" + "배송완료" + "</div>";
+                    mobileHtml +="          <div class='shipping-date'>" + "10/26(화) 도착" + "</div>";
+                    mobileHtml +="      </div>"
+                    mobileHtml +="      <div class='order-book-wrap'>";
+                    mobileHtml +="          <div class='book-img'><img src='/static/images/" + "yellow-book.png" + "'></div>";
+                    mobileHtml +="          <div class='book-info'>";
+                    mobileHtml +="              <div>" + "BASIC" + "</div>";
+                    mobileHtml +="              <div class='ft-w-b'>" + "READING SERIES" + "</div>";
+                    mobileHtml +="              <div class='book-category'>" + "for Teachers" + "</div>";
+                    mobileHtml +="          <div class='order-info'>";
+                    mobileHtml +="              <span class='order-price'>" + "19,000" + "원</span>";
+                    mobileHtml +="              <span class='gray-curcle'></span>";
+                    mobileHtml +="              <span class='book-count'>3개</span>";
+                    mobileHtml +="          </div>";
+                    mobileHtml +="          </div>";
+                    mobileHtml +="      </div>";
+                    mobileHtml +="  </div>"
             }
 
-            $("#popup-content tbody").html(html)
+            $("#m-popup-content .m-order-wrap").html(mobileHtml);
+            $("#pc-popup-content tbody").html(html)
         });
     });
         $(document).on("click", '.close', function(){
@@ -82,7 +124,7 @@
             <span class='close pc-close'><img src='/static/images/refund-request.png'></span>
         </div>
 
-        <div id="popup-content">
+        <div id="pc-popup-content">
             <table>
                 <thead>
                         <tr>
@@ -100,6 +142,15 @@
 
                 </tbody>
             </table>
+        </div>
+
+        <div id="m-popup-content">
+            <div class='m-order-wrap'>
+                <div class='m-order-header'>
+                    <span class='order-num-text'>주문번호</span>
+                    <span class='order-number'></span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="contents-area d-f">
